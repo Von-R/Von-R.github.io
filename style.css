@@ -1,1 +1,247 @@
-Style
+/******* global parameters ***********/
+
+:root {
+  --blue: #319DF6;
+  --nav_underline: #4A8DBB;
+  --gray: #EEEEEE;
+  --darkgray: #8F868E;
+  --author_gray: #3C352F;
+  --red: #F51614;
+  --border: #DADADA;
+}
+
+* {
+  background-color: var(--gray);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+
+/* header section */
+header {
+  padding-top: 10px;
+  margin-bottom: 10px;
+  background-color: var(--blue);
+}
+
+.site-title {
+  justify-content: left;
+  font-weight: 400;
+  background-color: var(--blue);
+  color: white;
+}
+
+header a {
+  text-decoration: none;
+}
+
+.far.fa-hand-lizard {
+  color: white;
+  background-color: var(--blue);
+  margin-left: 17px;
+}
+
+/****** Navbar section ***********/
+
+.navbar {
+  margin-top: 10px;
+  flex-direction: row;
+}
+
+.navbar.navlist {
+  height: 100%;
+}
+
+.navlist {
+  background-color: white;
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+.navitem.navlink {
+  justify-content: left;
+  background: transparent;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.navitem.navlink a {
+  color: black;
+  text-decoration: none;
+  background: transparent;
+}
+
+.navitem.navlink a:hover {
+  color: var(--blue);
+  text-decoration: underline;
+}
+
+.navlink.active {
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom: 3px solid var(--blue);
+}
+
+.navitem.navbar-search {
+  display: flex;
+  background: transparent;
+  flex-grow: 2;
+  padding-right: 10px;
+  justify-content: flex-end;
+}
+
+#navbar-search-button {
+  border: none;
+  margin-left: 5px;
+  background-color: transparent;
+}
+
+.fas.fa-search {
+  background-color: transparent;
+}
+
+#navbar-search-button:hover {
+  color: var(--blue);
+}
+
+.navbar-search #navbar-search-input {
+  display: flex;
+  border-style: solid;
+  border-width: 1px;
+  text-indent: 5px;
+  height: 80%;
+  align-self: center;
+}
+
+.navbar-search #navbar-search-input:focus {
+  background-color: white;
+}
+
+/*********** body section ***********/
+
+.twit-container {
+  display: inline-flex;
+  flex-wrap: wrap;
+
+  padding-top: 50px;
+  padding-left: 150px;
+  justify-content: flex-start;
+
+}
+
+.twit-container > .twit {
+  margin: 6px;
+
+}
+
+.twit {
+  display: flex;
+  background-color: white;
+  flex-basis: 30%;
+  width: 367px;
+  height: 107px;
+  border-style: solid;
+  border-color: var(--border);
+  border-width: thin;
+
+}
+
+.twit-content {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  margin-left: 20px;
+  justify-content: space-between;
+  background: transparent;
+
+}
+
+
+.twit-text {
+  display: inline-block;
+  background: transparent;
+  padding-top: 18px;
+  padding-right: 15px;
+}
+
+.twit-author {
+  background: transparent;
+
+}
+
+.twit-author a {
+  display: flex;
+  color: black;
+  font-weight: bolder;
+  margin-bottom: 15px;
+  margin-right: 18px;
+  justify-content: flex-end;
+  text-decoration: none;
+  background: transparent;
+}
+
+.twit-author a:hover {
+  color: var(--blue);
+}
+
+
+
+.twit-icon {
+  display: flex;
+  justify-content: flex-start;
+  background: transparent;
+  height: 100%;
+  width: 35px;
+
+  
+}
+
+.twit-icon i {
+  background: transparent;
+  padding-left: 15px;
+  padding-top: 18px;
+  padding-right: auto;
+  font-size: 23px;
+}
+
+/***** Create twit section *****/
+
+#create-twit-button {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  height: 75px;
+  width: 75px;
+  background-color: var(--red);
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 2px 2px 10px grey;
+}
+
+#create-twit-button:hover {
+  background-color: var(--blue);
+  transform-origin: center;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+#create-twit-button i {
+  color: white;
+  background-color: transparent;
+  font-size: 30px;
+}
+
+#create-twit-button::before {
+  width: 50px;
+  height: 50px;
+  
+}
